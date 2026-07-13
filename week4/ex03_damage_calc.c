@@ -43,5 +43,22 @@ int main()
         printf("No critical hit.\n");
     }
 
+    printf("HP Enemy: 500\n");
+    int hp = 500;
+    int enemyhp = hp - (int)Damage;
+    if (enemyhp <= 0)
+    {
+        enemyhp = 0;
+    }
+    printf("Remaining HP: %d\n", enemyhp);
+    if (enemyhp == 0)
+    {
+        printf("Enemy defeated!\n");
+    }
+    else
+    {
+        printf("Enemy still alive.\n");
+    }
+
     return 0;
 }
